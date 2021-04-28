@@ -9,7 +9,7 @@ protected:
     int rows = 1, columns = 1;
 
 public:
-    int *grid = new T[rows * columns];
+    T *grid = new T[rows * columns];
     inline T &operator[](std::pair<int, int> pos) const { return grid[(pos.first * columns) + pos.second]; }
     template <typename F>
     friend std::ostream &operator<<(std::ostream &os, const matrix<F> &mat);
