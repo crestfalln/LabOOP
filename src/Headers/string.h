@@ -5,13 +5,13 @@ namespace mys
     template <typename T = char>
     class MyString
     {
-    public:
         // Types
         size_t M_size = 0;
         size_t A_size = 100;
         T *str = NULL;
         std::allocator<T> alloc;
 
+    public:
         // Constructors
         MyString(size_t const default_A_size = 100);
         MyString(MyString const &);
@@ -22,21 +22,19 @@ namespace mys
         ~MyString(void);
 
         // Members
-        size_t size();
-        MyString &resize(size_t const size);
-        MyString &extend();
-        MyString &operator+(MyString &) const;
+        MyString &extend(size_t to = 0);
+        MyString operator+(MyString const &) const;
         MyString &operator=(MyString);
         MyString &operator=(char const[]);
-        bool operator<=(MyString &) const;
-        void to_upper();
-        void to_lower();
+        operator int() const { return M_size; }
+        MyString &to_upper();
+        MyString &to_lower();
 
         // Friends
         template <typename U>
         friend void swap(MyString<U> &, MyString<U> &);
         template <typename U>
-        friend std::ostream &operator<<(std::ostream &, MyString<U> &);
+        friend std::ostream &operator<<(std::ostream &, MyString<U> const &);
     };
 
     //MyString Definations
@@ -92,14 +90,51 @@ namespace mys
     }
 
     template <typename T>
-    MyString<T> &MyString<T>::extend()
+    MyString<T> &MyString<T>::extend(size_t to)
     {
         MyString dummy(*this);
         alloc.deallocate(str, A_size);
         str = alloc.allocate(A_size < 1);
-        A_size = A_size << 1;
+        do
+        {
+            A_size = A_size << 1;
+        } while (A_size >= to);
         for (int it = 0; it < dummy.M_size; it++)
             *(str + it) = *(dummy.str + it);
+        return *this;
+    }
+
+    template <typename T>
+    MyString<T> MyString<T>::operator+(MyString<T> const &string) const
+    {
+        MyString result(*this);
+        if (result.A_size < M_size + string.M_size)
+            result.extend(M_size + string.M_size);
+        for (int it = 0; it < string.M_size; it++)
+            *(result.str + result.M_size + it) = *(string.str + it);
+        result.M_size = M_size + string.M_size;
+        return result;
+    }
+
+    template <typename T>
+    MyString<T> &MyString<T>::to_lower()
+    {
+        for (int it = 0; it < M_size; it++)
+        {
+            if (*(str + it) <= 'Z' && *(str + it) >= 'A')
+                *(str + it) += ('a' - 'A');
+        }
+        return *this;
+    }
+
+    template <typename T>
+    MyString<T> &MyString<T>::to_upper()
+    {
+        for (int it = 0; it < M_size; it++)
+        {
+            if (*(str + it) <= 'z' && *(str + it) >= 'a')
+                *(str + it) -= ('a' - 'A');
+        }
         return *this;
     }
 
@@ -122,7 +157,7 @@ namespace mys
     }
 
     template <typename T>
-    std::ostream &operator<<(std::ostream &os, MyString<T> &string)
+    std::ostream &operator<<(std::ostream &os, MyString<T> const &string)
     {
         for (int it = 0; it < string.M_size; it++)
             os << *(string.str + it);
@@ -130,5 +165,5 @@ namespace mys
     }
 
     // Useful Alias
-    typedef MyString<char> string;
+    using string = MyString<>;
 }
