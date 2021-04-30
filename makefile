@@ -1,6 +1,6 @@
 CC = g++
-objects = 1 2
+objects = 1 2 3 4
 all : $(objects)
 
 $(objects): % : src/%.cpp
-	$(CC) $< -o bin/$@.o
+	$(CC) $< -g -o bin/$@.o
