@@ -23,6 +23,7 @@ namespace mys
 
         // Members
         MyString &extend(size_t to = 0);
+        int size(){return int(*this);}
         MyString operator+(MyString const &) const;
         MyString &operator=(MyString);
         MyString &operator=(char const[]);

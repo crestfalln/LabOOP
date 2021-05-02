@@ -4,4 +4,5 @@
 
 Right now extra things are:  
 * Matrix Type  
-* String Type with a custom allocator!
+* String Type 
+* Vector Type
