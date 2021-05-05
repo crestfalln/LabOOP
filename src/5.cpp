@@ -1,5 +1,6 @@
 #include "Headers/vector.h"
 
+
 int main()
 {
     mys::Vector<int> vec;
@@ -8,6 +9,6 @@ int main()
     vec.insert(12);
     for(auto it : vec)
     {
-        std::cout << it << '\n';
+        std::cout << it << ' ';
     }
 }

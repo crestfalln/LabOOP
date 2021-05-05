@@ -30,6 +30,7 @@ namespace mys
             a_size = a;
             data = alloc.allocate(a_size);
         }
+
         inline iterator begin()
         {
             return data;
@@ -44,8 +45,7 @@ namespace mys
         {
             size_t new_a_size = a_size << fac;
             m_type* new_data = alloc.allocate(new_a_size);
-            for(int i = 0 ; i < m_size; i++)
-                *(new_data + i) = *(data + i);
+            memcpy(new_data , data , m_size*sizeof(m_type));
             alloc.deallocate(data , a_size);
             data = new_data;
             a_size = new_a_size;
@@ -116,7 +116,7 @@ namespace mys
         VectorIterator operator++(int)
         {
             VectorIterator dum = *this;
-            dum++;
+            ++(*this);
             return dum;
         };
 
@@ -129,7 +129,7 @@ namespace mys
         VectorIterator operator--(int)
         {
             VectorIterator dum = *this;
-            dum--;
+            --(*this);
             return dum;
         };
 
