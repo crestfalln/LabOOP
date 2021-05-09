@@ -7,7 +7,7 @@ int main()
 {
     std::array<int , 5> count ;
     count.fill(0);
-    int spoiltVotes;
+    int spoiltVotes = 0;
     for(int i; std::cin >> i; )
     {
         if(i > 5 || i < 1)

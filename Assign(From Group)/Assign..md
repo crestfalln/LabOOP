@@ -1300,7 +1300,7 @@ int main()
 {
     std::array<int , 5> count ;
     count.fill(0);
-    int spoiltVotes;
+    int spoiltVotes = 0;
     for(int i; std::cin >> i; )
     {
         if(i > 5 || i < 1)
@@ -1436,7 +1436,7 @@ int main()
 |3|   11|  
 |4|   16|  
 |5|   11|  
-Total No. of spoilt votes: -489172288  
+Total No. of spoilt votes: 32  
  
 
 ---
