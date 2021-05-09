@@ -1,4 +1,12 @@
-//QUESTION 
+//QUESTION Implement a class string containing the following functions:
+/*
+- Overload + operator to carry out the concatenation of strings.
+- Overload = operator to carry out string copy.
+- Overload <= operator to carry out the comparison of strings.
+- Function to display the length of a string.
+- Function tolower( ) to convert upper case letters to lower case.
+- Function toupper( ) to convert lower case letters to upper case.
+*/
 
 #include <iostream>
 #include <string.h>

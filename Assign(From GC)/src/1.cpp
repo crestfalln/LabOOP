@@ -1,3 +1,5 @@
+//QUESTION Write a program for multiplication of two matrices using OOP.
+
 #include <iostream>
 #include <utility>
 #include <typeinfo>
