@@ -14,10 +14,12 @@ int main()
         else
             count[i-1]++;
     }
-    std::cout << "No of Votes" << std::endl;
+    std::cout << "No of Votes: " << std::endl;
     std::cout << "|Candidate|Ballot Count|" << std::endl;
+    std::cout << "|---|---|" << std::endl;
     for(int it = 0; it < count.size(); it++)
     {
         std::cout << "|" <<  it+1 << "|   " << count[it] << "|\n";
     } 
+    std::cout << "Total No. of spoilt votes: " << spoiltVotes;
 }
