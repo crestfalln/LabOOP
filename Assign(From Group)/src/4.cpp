@@ -5,7 +5,8 @@
 
 int main()
 {
-    std::array<int , 5> count;
+    std::array<int , 5> count ;
+    count.fill(0);
     int spoiltVotes;
     for(int i; std::cin >> i; )
     {

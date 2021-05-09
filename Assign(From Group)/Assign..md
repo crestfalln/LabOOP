@@ -1298,7 +1298,8 @@ int main()
 
 int main()
 {
-    std::array<int , 5> count;
+    std::array<int , 5> count ;
+    count.fill(0);
     int spoiltVotes;
     for(int i; std::cin >> i; )
     {
@@ -1430,12 +1431,12 @@ int main()
  No of Votes:   
 |Candidate|Ballot Count|  
 |---|---|  
-|1|   -966128632|  
-|2|   32778|  
-|3|   516854904|  
-|4|   22034|  
+|1|   16|  
+|2|   14|  
+|3|   11|  
+|4|   16|  
 |5|   11|  
-Total No. of spoilt votes: 516854448  
+Total No. of spoilt votes: -489172288  
  
 
 ---
