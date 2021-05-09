@@ -1307,13 +1307,15 @@ int main()
         else
             count[i-1]++;
     }
-    std::cout << "No of Votes" << std::endl;
+    std::cout << "No of Votes: " << std::endl;
     std::cout << "|Candidate|Ballot Count|" << std::endl;
+    std::cout << "|---|---|" << std::endl;
     for(int it = 0; it < count.size(); it++)
     {
         std::cout << "|" <<  it+1 << "|   " << count[it] << "|
 ";
     } 
+    std::cout << "Total No. of spoilt votes: " << spoiltVotes;
 }
  
 ```
@@ -1425,13 +1427,15 @@ int main()
  
 
 **Output**  
- No of Votes  
+ No of Votes:   
 |Candidate|Ballot Count|  
-|1|   932517016|  
-|2|   32781|  
-|3|   1064850488|  
-|4|   22054|  
+|---|---|  
+|1|   -966128632|  
+|2|   32778|  
+|3|   516854904|  
+|4|   22034|  
 |5|   11|  
+Total No. of spoilt votes: 516854448  
  
 
 ---
