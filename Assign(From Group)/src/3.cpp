@@ -10,10 +10,10 @@
 
 int main()
 {
-    std::cout << "|P    |"
-              << "|r    |"
-              << "|n    |"
-              << "|V" << std::endl;
+    std::cout << "|P    "
+              << "|r    "
+              << "|n    "
+              << "|V|" << std::endl;
     std::cout << "|---|---|---|---|" << std::endl;
     for (int n = 1; n <= 10; n++)
     {

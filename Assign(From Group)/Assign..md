@@ -150,10 +150,10 @@ The Elements of the vector are:
 
 int main()
 {
-    std::cout << "|P    |"
-              << "|r    |"
-              << "|n    |"
-              << "|V" << std::endl;
+    std::cout << "|P    "
+              << "|r    "
+              << "|n    "
+              << "|V|" << std::endl;
     std::cout << "|---|---|---|---|" << std::endl;
     for (int n = 1; n <= 10; n++)
     {
@@ -179,7 +179,7 @@ int main()
  
 
 **Output**  
- |P    ||r    ||n    ||V  
+ |P    |r    |n    |V|  
 |---|---|---|---|  
 |100    |10    |1    |2000|  
 |200    |10    |1    |4000|  
