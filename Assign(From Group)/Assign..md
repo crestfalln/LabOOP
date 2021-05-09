@@ -1307,7 +1307,13 @@ int main()
         else
             count[i-1]++;
     }
-    
+    std::cout << "No of Votes" << std::endl;
+    std::cout << "|Candidate|Ballot Count|" << std::endl;
+    for(int it = 0; it < count.size(); it++)
+    {
+        std::cout << "|" <<  it+1 << "|   " << count[it] << "|
+";
+    } 
 }
  
 ```
@@ -1419,7 +1425,13 @@ int main()
  
 
 **Output**  
-   
+ No of Votes  
+|Candidate|Ballot Count|  
+|1|   932517016|  
+|2|   32781|  
+|3|   1064850488|  
+|4|   22054|  
+|5|   11|  
  
 
 ---
