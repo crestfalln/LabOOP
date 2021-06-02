@@ -1,7 +1,6 @@
 # Index  
 1.) [Assignment 15-May-2021](#assignment-no-15-may-2021)  
-2.) [Assignment 25-May-2021](#assignment-no-25-may-2021)
-
+2.) [Assignment 25-May-2021](#assignment-no-25-may-2021)  
 
 
 # Assignment No.  15-May-2021   
@@ -21,7 +20,7 @@
  
 
 ---
-#### Question No. 1
+#### Question No. 1 
 :   
 >Write a function using reference variables as arguments to swap the values of a pair of integers.
   
@@ -56,7 +55,7 @@ int main()
 -
 
 **Input**  
-18 90     
+18 90             
 
 **Output**  
 Enter two Numbers:   
@@ -71,7 +70,7 @@ b: 18
 ---
 
 
-#### Question No. 2
+#### Question No. 2 
 :   
 >Write a function that creates a vector of user given size M using new operator.
   
@@ -102,7 +101,7 @@ int main()
 -
 
 **Input**  
-23     
+23             
 
 **Output**  
 Enter the size of the vector you want to create: The size of the vector is: 23  
@@ -110,13 +109,15 @@ The Elements of the vector are:
 0  
 0  
 0  
-...
- 
+0  
+0  
+0  
+... 
 
 ---
 
 
-#### Question No. 3
+#### Question No. 3 
 :   
 >Write a program to evaluate the following investment equation
   
@@ -168,12 +169,14 @@ int main()
 |200    |0.1    |1    |2200|  
 |300    |0.1    |1    |3300|  
 |400    |0.1    |1    |4400|  
-... 
+|500    |0.1    |1    |5500|  
+|600    |0.1    |1    |6600|  
+...
 
 ---
 
 
-#### Question No. 4
+#### Question No. 4 
 :   
 >An election is contested by five candidates. The candidates are numbered 1 to 5 and the voting is done by marking the candidate number on the ballot paper. Write a program to read the ballots and count the vote cast for each candidate using an array variable count. In case, a number read is outside the range 1 to 5, the ballot should be considered as a “spoilt ballot” and the program should also count the numbers of “spoilt ballots”.
   
@@ -214,17 +217,15 @@ int main()
 -
 
 **Input**  
-7    
-3    
-5    
-4    
-7    
-1    
-3    
-7    
-4    
+7            
+3            
+5            
+4            
+7            
+1            
+3            
+7            
 ...
- 
 
 **Output**  
 Enter who to vote(from 5 candidates):   
@@ -241,7 +242,7 @@ Total No. of spoilt votes: 32
 ---
 
 
-#### Question No. 5
+#### Question No. 5 
 :   
 >Write a program to evaluate the following function to 0.0001% accuracy
   
@@ -336,12 +337,12 @@ The sum that does not take a argument: 1
 
 ## Index
 
-1. [Write and run a program that directly implements the quotient operator / and the remainder operator % for the division of positive integers.](#question-no-1)  
-2. [Write a function which evaluates the third degree polynomial a0 + a1x + a2x2 + a3x3. Also implement this function using Horner’s Algorithm, grouping the calculations as a0 + (al + (a2 + a3x)x)x . Compare the efficiency of both the functions.](#question-no-2)  
-    * [A note on time complexity](#a-note-about-time-complexity)
- 
+1. [Write and run a program that directly implements the quotient operator / and the remainder operator % for the division of positive integers.](#question-no-1)
+2. [Write a function which evaluates the third degree polynomial a0 + a1x + a2x2 + a3x3. Also implement this function using Horner’s Algorithm, grouping the calculations as a0 + (al + (a2 + a3x)x)x . Compare the efficiency of both the functions.](#question-no-2)
+    * [A Note on Time Complexity](#a-note-about-time-complexity) 
+
 ---
-#### Question No. 1
+#### Question No. 1  
 :   
 >Write and run a program that directly implements the quotient operator / and the remainder operator % for the division of positive integers.
   
@@ -448,12 +449,12 @@ int main()
 -
 
 **Input**  
-123 32  
-234 0  
-21 7  
-1223453145141234 323  
-12 3  
-23    
+123 32          
+234 0          
+21 7          
+1223453145141234 323          
+12 3          
+23            
 
 **Output**  
 Keyboard Interupt to Exit  
@@ -476,7 +477,7 @@ Quotient: 4	Remainder: 0
 ---
 
 
-#### Question No. 2
+#### Question No. 2  
 :   
 >Write a function which evaluates the third degree polynomial a0 + a1x + a2x2 + a3x3. Also implement this function using Horner’s Algorithm, grouping the calculations as a0 + (al + (a2 + a3x)x)x . Compare the efficiency of both the functions.
   
@@ -531,6 +532,7 @@ int main()
 
 **Output**  
  
+
 ## A note about time complexity:
 
 ```

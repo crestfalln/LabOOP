@@ -9,12 +9,12 @@
 
 ## Index
 
-1. [Write and run a program that directly implements the quotient operator / and the remainder operator % for the division of positive integers.](#question-no-1)  
-2. [Write a function which evaluates the third degree polynomial a0 + a1x + a2x2 + a3x3. Also implement this function using Horner’s Algorithm, grouping the calculations as a0 + (al + (a2 + a3x)x)x . Compare the efficiency of both the functions.](#question-no-2)  
-    * [A note on time complexity](#a-note-about-time-complexity)
- 
+1. [Write and run a program that directly implements the quotient operator / and the remainder operator % for the division of positive integers.](#question-no-1)
+2. [Write a function which evaluates the third degree polynomial a0 + a1x + a2x2 + a3x3. Also implement this function using Horner’s Algorithm, grouping the calculations as a0 + (al + (a2 + a3x)x)x . Compare the efficiency of both the functions.](#question-no-2)
+    * [A Note on Time Complexity](#a-note-about-time-complexity) 
+
 ---
-#### Question No. 1
+#### Question No. 1  
 :   
 >Write and run a program that directly implements the quotient operator / and the remainder operator % for the division of positive integers.
   
@@ -121,12 +121,12 @@ int main()
 -
 
 **Input**  
-123 32  
-234 0  
-21 7  
-1223453145141234 323  
-12 3  
-23    
+123 32          
+234 0          
+21 7          
+1223453145141234 323          
+12 3          
+23            
 
 **Output**  
 Keyboard Interupt to Exit  
@@ -149,7 +149,7 @@ Quotient: 4	Remainder: 0
 ---
 
 
-#### Question No. 2
+#### Question No. 2  
 :   
 >Write a function which evaluates the third degree polynomial a0 + a1x + a2x2 + a3x3. Also implement this function using Horner’s Algorithm, grouping the calculations as a0 + (al + (a2 + a3x)x)x . Compare the efficiency of both the functions.
   
@@ -204,6 +204,7 @@ int main()
 
 **Output**  
  
+
 ## A note about time complexity:
 
 ```
@@ -214,7 +215,7 @@ in Horner's (3 compared to 6). But modern x86-64 processors are really fast at 6
 multiplication, so the change only becomes apparent when the iteration count goes into the range
 of tens of billions. It is also of note that the method used for calculating the average time was
 multithreaded and was done with a used computer which could render the results, hence the average 
-erroneous. The sample is of 1000 is also not that big.
+erroneous. The sample of 1000 is also not that big.
 ```
 
 ---
