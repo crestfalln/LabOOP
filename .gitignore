@@ -1,5 +1,5 @@
 **/*.o
-**/Testing
-**/.vscode
-**/.pdf
-**/.tex
+**/*.Testing
+**/*.vscode
+**/*.pdf
+**/*.tex
