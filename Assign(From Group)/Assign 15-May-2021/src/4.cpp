@@ -8,6 +8,7 @@ int main()
     std::array<int , 5> count ;
     count.fill(0);
     int spoiltVotes = 0;
+    std::cout << "Enter who to vote(from 5 candidates): " << std::endl;
     for(int i; std::cin >> i; )
     {
         if(i > 5 || i < 1)

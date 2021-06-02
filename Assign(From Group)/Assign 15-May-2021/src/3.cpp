@@ -19,10 +19,10 @@ int main()
     {
         for (int r = 10; r <= 20; r++) // Don't work with doubles use ints and then divide by 10 later.
         {
-            for (int P = 100; P <= 1000; P += 100)
+            for (int P = 10; P <= 100; P += 10)
             {
-                long V = P * (10 + r) * n;
-                std::cout << '|' << P*10 << "    |" << r/double(10) << "    |" << n << "    |" << V << '|' << "\n";
+                long V = P * (100 + r) * n;
+                std::cout << '|' << P*10 << "    |" << r/double(100) << "    |" << n << "    |" << V << '|' << "\n";
             }
         }
     }
